@@ -5,9 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Properties;
 
-/**
- * @author Nitin Saini
- */
 public class ConfigUtils {
     static Properties prop = new Properties();
 

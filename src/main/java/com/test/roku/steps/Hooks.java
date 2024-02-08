@@ -12,9 +12,6 @@ import org.openqa.selenium.TakesScreenshot;
 import static com.test.roku.utils.DriverUtils.getDriver;
 import static com.test.roku.utils.DriverUtils.tearDown;
 
-/**
- * @author Nitin Saini
- */
 public class Hooks {
 
     @Before

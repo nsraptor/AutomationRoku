@@ -6,9 +6,6 @@ import org.testng.Assert;
 import static com.test.roku.utils.CommonUtils.waitForVisible;
 import static com.test.roku.utils.DriverUtils.getDriver;
 
-/**
- * @author Nitin Saini
- */
 public class AssertionUtils {
     public static void assertPresent(WebElement element) {
         waitForVisible(element);

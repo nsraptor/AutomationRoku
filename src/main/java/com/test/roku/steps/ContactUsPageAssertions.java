@@ -7,9 +7,6 @@ import org.openqa.selenium.WebElement;
 
 import static com.test.roku.utils.ConfigUtils.getPropertyByKey;
 
-/**
- * @author Nitin Saini
- */
 public class ContactUsPageAssertions {
 
     public ContactUsPageAssertions() {

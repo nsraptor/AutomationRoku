@@ -11,9 +11,6 @@ import static com.test.roku.utils.CommonUtils.sendKeysTo;
 import static com.test.roku.utils.DriverUtils.getDriver;
 import static com.test.roku.utils.CommonUtils.waitForNotVisible;
 
-/**
- * @author Nitin Saini
- */
 @Getter
 public class ContactUsPage {
     public ContactUsPage() {

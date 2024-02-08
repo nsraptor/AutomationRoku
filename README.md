@@ -4,7 +4,7 @@
 Purpose of this project is to automate Contact Us Form at "https://automationintesting.online/" as an assignment using [Selenium WebDriver v4.17.0](https://www.selenium.dev/blog/2024/selenium-4-17-released/) with Java as a programming language and [BDD approach](https://www.browserstack.com/guide/what-is-bdd) using [Cucumber](https://www.browserstack.com/guide/learn-about-cucumber-testing-tool) based framework.
 It generates an HTML report, using extent spark report which also includes web application screenshots for every test steps (pass and failed both)
 
-As per teh required scope i.e. UI tests, it covers type UI Functional tests with a scope of non-functional tests for API testing. 
+As per the required scope i.e. Automate UI tests, it covers only UI Functional tests with an extended possibility of automation non-functional tests for API testing. 
 
 This project follows the Maven structure, centralizing dependencies in the pom.xml file for straightforward local installation by anyone.
 Utilizing the Page Object Model (POM) design pattern, the implementation leverages Page Factory to enhance simplicity and ease of maintenance. 

@@ -8,9 +8,6 @@ import java.time.Duration;
 
 import static com.test.roku.utils.DriverUtils.getDriver;
 
-/**
- * @author Nitin Saini
- */
 public class CommonUtils {
     static Long timeout = Long.parseLong("30");
     static WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeout));

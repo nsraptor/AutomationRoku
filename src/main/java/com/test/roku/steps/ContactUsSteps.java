@@ -8,9 +8,6 @@ import io.cucumber.java.en.When;
 
 import static com.test.roku.utils.ConfigUtils.getPropertyByKey;
 
-/**
- * @author Nitin Saini
- */
 public class ContactUsSteps {
 
     ContactUsPageAssertions contactUsPageAssertions = new ContactUsPageAssertions();
@@ -89,7 +86,7 @@ public class ContactUsSteps {
         contactUsPageAssertions.assertErrorMessageDisplayedWhenBlankMessageTextEntered();
     }
 
-    @Then("User should be displayed {string} icon next to name text box")
+    @Then("User should be displayed {string} next to relevant text box")
     public void userShouldBeDisplayedIconNextToNameTextBox(String textBoxIcon) {
         contactUsPageAssertions.assertTextBoxIconDisplayed(textBoxIcon);
     }
