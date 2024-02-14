@@ -9,19 +9,27 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import static com.test.roku.utils.DriverUtils.getDriver;
-import static com.test.roku.utils.DriverUtils.tearDown;
+import com.test.roku.utils.DriverUtils;
+import org.openqa.selenium.WebDriver;
+
 
 public class Hooks {
+    private DriverUtils driverUtils;
+    public static WebDriver driver;
+
+    public WebDriver getWebDriver() {
+        return driver;
+    }
 
     @Before
     public void setUp() {
-        getDriver();
+        driverUtils = new DriverUtils();
+        driver = driverUtils.getDriver();
     }
 
     @After
     public void teardown() {
-        tearDown();
+        driverUtils.tearDown();
     }
 
     @BeforeAll
@@ -36,7 +44,7 @@ public class Hooks {
 
     public void afterStep(Scenario scenario) {
         Date currentDate = new Date();
-        File screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+        File screenshot = ((TakesScreenshot) driverUtils.getDriver()).getScreenshotAs(OutputType.FILE);
         try {
             byte[] fileContent = FileUtils.readFileToByteArray(screenshot);
             scenario.attach(fileContent, "image/png", "image");

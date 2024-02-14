@@ -1,0 +1,482 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/14/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 14 13:31:25 GMT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>152 seconds (152888 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "777-111-222"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1608168762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1608168762'><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+</pre></div></td>
+<td>46</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Name : "!3654£!_$£%!"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Name format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Name&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace439808087", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace439808087'><pre>java.lang.AssertionError: User Should be displayed invalid Name format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Name&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit out of range Phone Number : "777711112222333344445555"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: Actual text is Message must be between 20 and 2000 characters. and expected text is Phone must be between 11 and 21 characters. expected [true] but found [false]
+	at com.test.roku.utils.AssertionUtils.assertEquals(AssertionUtils.java:17)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorMessageDisplayedWhenOutOfRangeTextEntered(ContactUsPageAssertions.java:87)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedErrorWithAcceptableRange(ContactUsSteps.java:78)
+	at ✽.User should be displayed error with acceptable range of &quot;Phone&quot;(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:102)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1546316523", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1546316523'><pre>java.lang.AssertionError: Actual text is Message must be between 20 and 2000 characters. and expected text is Phone must be between 11 and 21 characters. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.test.roku.utils.AssertionUtils.assertEquals(AssertionUtils.java:17)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorMessageDisplayedWhenOutOfRangeTextEntered(ContactUsPageAssertions.java:87)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedErrorWithAcceptableRange(ContactUsSteps.java:78)
+	at ✽.User should be displayed error with acceptable range of &quot;Phone&quot;(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:102)
+</pre></div></td>
+<td>41</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Name : "123456789"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Name format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Name&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace217094453", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace217094453'><pre>java.lang.AssertionError: User Should be displayed invalid Name format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Name&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "missingDotComFromDomain@c"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Email format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Email&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:71)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace827756339", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace827756339'><pre>java.lang.AssertionError: User Should be displayed invalid Email format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Email&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:71)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "double..dots@domain.com"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Email format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Email&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:71)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace857053680", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace857053680'><pre>java.lang.AssertionError: User Should be displayed invalid Email format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Email&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:71)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "stringAsPhoneNumber"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace994214788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace994214788'><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "!@£$%^&*%^&*"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace897947340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace897947340'><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "stringWith42353254"", "User should be able to submit contact us request"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#submitContact&quot;}
+  (Session info: chrome=121.0.6167.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c302069f72314080c0566ba7749010a1, findElement {using=id, value=submitContact}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: /var/folders/m8/d_ml1jqs5rd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54595}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54595/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c302069f72314080c0566ba7749010a1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at com.test.roku.utils.CommonUtils.clickOnElement(CommonUtils.java:18)
+	at com.test.roku.pages.ContactUsPage.clickOnSubmitButton(ContactUsPage.java:66)
+	at com.test.roku.steps.ContactUsSteps.clickOnSubmitButton(ContactUsSteps.java:31)
+	at ✽.Click on submit button(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:86)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace275482050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace275482050'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#submitContact&quot;}
+  (Session info: chrome=121.0.6167.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c302069f72314080c0566ba7749010a1, findElement {using=id, value=submitContact}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: /var/folders/m8/d_ml1jqs5rd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54595}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54595/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c302069f72314080c0566ba7749010a1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at com.test.roku.utils.CommonUtils.clickOnElement(CommonUtils.java:18)
+	at com.test.roku.pages.ContactUsPage.clickOnSubmitButton(ContactUsPage.java:66)
+	at com.test.roku.steps.ContactUsSteps.clickOnSubmitButton(ContactUsSteps.java:31)
+	at ✽.Click on submit button(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:86)
+</pre></div></td>
+<td>78</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Name : "@£$%^&*($%^&"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Name format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Name&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace118186118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace118186118'><pre>java.lang.AssertionError: User Should be displayed invalid Name format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Name&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit out of range message : "lessThanTwenty"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: Actual text is Subject must be between 5 and 100 characters. and expected text is Message must be between 20 and 2000 characters. expected [true] but found [false]
+	at com.test.roku.utils.AssertionUtils.assertEquals(AssertionUtils.java:17)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorMessageDisplayedWhenOutOfRangeTextEntered(ContactUsPageAssertions.java:87)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedErrorWithAcceptableRange(ContactUsSteps.java:78)
+	at ✽.User should be displayed error with acceptable range of &quot;Message&quot;(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:125)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1926290110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1926290110'><pre>java.lang.AssertionError: Actual text is Subject must be between 5 and 100 characters. and expected text is Message must be between 20 and 2000 characters. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.test.roku.utils.AssertionUtils.assertEquals(AssertionUtils.java:17)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorMessageDisplayedWhenOutOfRangeTextEntered(ContactUsPageAssertions.java:87)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedErrorWithAcceptableRange(ContactUsSteps.java:78)
+	at ✽.User should be displayed error with acceptable range of &quot;Message&quot;(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:125)
+</pre></div></td>
+<td>38</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "+76726374627642"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1445316017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1445316017'><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+</pre></div></td>
+<td>48</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "+76 726374627642"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1144149029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1144149029'><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Phone Number : "564 792 007"", "User should be able to submit contact us request"</td>
+<td><div><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace472778609", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace472778609'><pre>java.lang.AssertionError: User Should be displayed invalid Phone format error message.
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
+	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
+	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
+	at ✽.User should be displayed invalid &quot;Phone&quot; format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
+</pre></div></td>
+<td>47</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit out of range Subject : "qwe"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>38</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit out of range Phone Number : "777"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>45</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field specific icons", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "spaces not@allowed.com"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>49</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field labels", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "missingDomain@"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>48</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field labels", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field specific icons", "User should be able to submit contact us request"</td>
+<td></td>
+<td>15</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit out of range Subject : "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>38</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "missingAtDotCom"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>48</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "@missingUserName.com"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>48</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user should be able to submit contact us form with valid successfully", "User should be able to submit contact us request"</td>
+<td></td>
+<td>23</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit out of range message : "MessageTextWithMoreThan2000CharactersopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmQRSTUVWXYZ"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>39</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "missingCom@xyz."", "User should be able to submit contact us request"</td>
+<td></td>
+<td>48</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should not be able to submit invalid Email : "invalidEmailMissingAt.com"", "User should be able to submit contact us request"</td>
+<td></td>
+<td>45</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field labels", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should see error message with invalid information", "User should be able to submit contact us request"</td>
+<td></td>
+<td>52</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field labels", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field specific icons", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the message filed caption", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user should be displayed the field specific icons", "User should be able to submit contact us request"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@3d680b5a</td></tr>
+</table><p>
+</body>
+</html>

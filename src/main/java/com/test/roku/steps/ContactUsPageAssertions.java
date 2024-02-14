@@ -3,14 +3,15 @@ package com.test.roku.steps;
 import com.test.roku.pages.ContactUsPage;
 import com.test.roku.utils.AssertionUtils;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import static com.test.roku.utils.ConfigUtils.getPropertyByKey;
 
 public class ContactUsPageAssertions {
 
-    public ContactUsPageAssertions() {
-        contactUspage = new ContactUsPage();
+    public ContactUsPageAssertions(WebDriver driver) {
+        contactUspage = new ContactUsPage(driver);
         thanksMessage = contactUspage.getThanksMessage();
         errorMessageContainer = contactUspage.getErrorMessageContainer();
         nameIdCardIcon = contactUspage.getNameIdCardIcon();

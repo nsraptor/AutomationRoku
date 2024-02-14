@@ -16,7 +16,7 @@ Feature: User should be able to submit contact us request
 
     Scenario: Verify user should be displayed the message filed caption
       Then User should be displayed message caption next to message text area
-
+#
 
     Scenario Outline: Verify user should be displayed the field labels
       Then User should be displayed <fieldLabel> label in the text box
@@ -105,7 +105,6 @@ Feature: User should be able to submit contact us request
         | outOfRangePhoneNumber |
         | "777" |
         | "777711112222333344445555" |
-
 
     Scenario Outline: Verify user should not be able to submit out of range Subject : <outOfRangeSubjectText>
       When User enters <outOfRangeSubjectText> in the subject field

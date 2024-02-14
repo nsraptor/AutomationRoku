@@ -1,6 +1,9 @@
 package com.test.roku.pages;
 
+import com.test.roku.steps.Hooks;
+import com.test.roku.utils.DriverUtils;
 import lombok.Getter;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,13 +11,14 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import static com.test.roku.utils.CommonUtils.clickOnElement;
 import static com.test.roku.utils.CommonUtils.sendKeysTo;
-import static com.test.roku.utils.DriverUtils.getDriver;
 import static com.test.roku.utils.CommonUtils.waitForNotVisible;
 
 @Getter
 public class ContactUsPage {
-    public ContactUsPage() {
-        PageFactory.initElements(getDriver(), this);
+    WebDriver driver = new Hooks().getWebDriver();
+    public ContactUsPage(WebDriver driver) {
+        System.out.println("WEBELEMENTS INITIALISED!!!!");
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(css = ".fa-id-card")
@@ -53,9 +57,9 @@ public class ContactUsPage {
          sendKeysTo(messageTextArea, message);
     }
 
-    public void scrollToContactUsForm() {
+    public void scrollToContactUsForm(WebDriver webDriver) {
         // Call the scrollIntoView method using JavascriptExecutor
-        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", nameTextField);
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", nameTextField);
     }
 
     public void clickOnSubmitButton() {

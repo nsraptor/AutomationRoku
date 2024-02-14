@@ -5,12 +5,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 import static com.test.roku.utils.ConfigUtils.getPropertyByKey;
 
 public class ContactUsSteps {
-
-    ContactUsPageAssertions contactUsPageAssertions = new ContactUsPageAssertions();
+    Hooks hooks = new Hooks();
+    WebDriver driver = hooks.getWebDriver();;
+    ContactUsPageAssertions contactUsPageAssertions = new ContactUsPageAssertions(driver);
     ContactUsPage contactuspage = contactUsPageAssertions.getContactUsPage();
 
     @When("User enter valid contact us details")
@@ -163,6 +165,6 @@ public class ContactUsSteps {
 
     @Given("User is on the contact us page of the application and scrolled down")
     public void userIsOnTheContactUsPageOfTheApplicationAndScrolledDown() {
-        contactuspage.scrollToContactUsForm();
+        contactuspage.scrollToContactUsForm(driver);
     }
 }

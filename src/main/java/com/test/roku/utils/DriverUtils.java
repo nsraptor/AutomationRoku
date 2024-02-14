@@ -1,5 +1,7 @@
 package com.test.roku.utils;
 
+import com.test.roku.pages.ContactUsPage;
+import com.test.roku.steps.ContactUsPageAssertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,9 +10,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import static com.test.roku.utils.ConfigUtils.*;
 
 public class DriverUtils {
-    static WebDriver driver;
+    WebDriver driver;
 
-    public static void initDriver() {
+    public void initDriver() {
         loadProperties();
         String deviceType;
         String browserName;
@@ -47,21 +49,28 @@ public class DriverUtils {
                 driver.manage().window().setSize(new Dimension(768, 1024));
                 break;
             default:
+                System.out.println("MAXIMISE THE WINDOW");
+
                 driver.manage().window().maximize();
                 break;
         }
+
         driver.get(getPropertyByKey("contactUsPage.URL"));
     }
 
-    public static WebDriver getDriver() {
+    public WebDriver getDriver() {
         if (driver == null) {
             initDriver();
         }
         return driver;
     }
 
-    public static void tearDown() {
-        driver.quit();
+    public WebDriver getWebDriver() {
+        return driver;
+    }
+
+    public void tearDown() {
+        if (driver != null) driver.quit();
         driver = null;
     }
 }
