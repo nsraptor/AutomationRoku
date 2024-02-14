@@ -6,11 +6,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static com.test.roku.utils.DriverUtils.getDriver;
+import com.test.roku.steps.Hooks;
 
 public class CommonUtils {
     static Long timeout = Long.parseLong("30");
-    static WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeout));
+    static WebDriverWait wait = new WebDriverWait(new Hooks().getWebDriver(), Duration.ofSeconds(timeout));
 
     public static void clickOnElement(WebElement element) {
         waitForVisible(element);
