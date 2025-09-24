@@ -1,145 +1,121 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 35, Failures: 14, Errors: 0, Skipped: 0, Time elapsed: 153.2 s <<< FAILURE! -- in runner.TestRunner
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Name : "@£$%^&*($%^&"", "User should be able to submit contact us request"](12) -- Time elapsed: 0.148 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Name format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Name" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Name : "123456789"", "User should be able to submit contact us request"](14) -- Time elapsed: 0.005 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Name format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Name" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Name : "!3654£!_$£%!"", "User should be able to submit contact us request"](15) -- Time elapsed: 0.001 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Name format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Name" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:60)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Email : "missingDotComFromDomain@c"", "User should be able to submit contact us request"](18) -- Time elapsed: 0.534 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Email format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Email" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:71)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "564 792 007"", "User should be able to submit contact us request"](21) -- Time elapsed: 44.71 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Phone format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Phone" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "+76726374627642"", "User should be able to submit contact us request"](22) -- Time elapsed: 0.022 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Phone format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Phone" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "!@£$%^&*%^&*"", "User should be able to submit contact us request"](24) -- Time elapsed: 0 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Phone format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Phone" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "stringAsPhoneNumber"", "User should be able to submit contact us request"](25) -- Time elapsed: 0 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Phone format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Phone" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "+76 726374627642"", "User should be able to submit contact us request"](26) -- Time elapsed: 0 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Phone format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Phone" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Email : "double..dots@domain.com"", "User should be able to submit contact us request"](27) -- Time elapsed: 0 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Email format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Email" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:71)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "777-111-222"", "User should be able to submit contact us request"](28) -- Time elapsed: 0 s <<< FAILURE!
-java.lang.AssertionError: User Should be displayed invalid Phone format error message.
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.test.roku.utils.AssertionUtils.assertFail(AssertionUtils.java:25)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorDisplayedForInvalidFormat(ContactUsPageAssertions.java:170)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedInvalidFormatErrorMessage(ContactUsSteps.java:141)
-	at ✽.User should be displayed invalid "Phone" format error message(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:87)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit invalid Phone Number : "stringWith42353254"", "User should be able to submit contact us request"](30) -- Time elapsed: 28.92 s <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#submitContact"}
-  (Session info: chrome=121.0.6167.184)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c302069f72314080c0566ba7749010a1, findElement {using=id, value=submitContact}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: /var/folders/m8/d_ml1jqs5rd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54595}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54595/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c302069f72314080c0566ba7749010a1
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.02 s <<< FAILURE! -- in runner.TestRunner
+runner.TestRunner.runScenario["Verify user should see main activity", "User should be able to launch prime Video Application"](1) -- Time elapsed: 8.423 s <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: Url or Uri must start with <scheme>://
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3', java.version: '21.0.2'
+Driver info: io.appium.java_client.AppiumDriver
+Command: [95e9bcd9-16d7-4909-9850-95b0224278cc, get {url=com.amazon.avod.thirdpartyclient/com.amazon.avod.app.MainActivity}]
+Capabilities {appium:appActivity: com.amazon.avod.app.MainAct..., appium:appPackage: com.amazon.avod.thirdpartyc..., appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.amazon.avod.app.MainAct..., appPackage: com.amazon.avod.thirdpartyc..., automationName: UiAutomator2, deviceName: 2A211FDH300FY5, platformName: ANDROID, platformVersion: 16}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 7 Pro, appium:deviceName: 2A211FDH300FY5, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: 2A211FDH300FY5, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 16, appium:statBarHeight: 142, appium:takesScreenshot: true, appium:viewportRect: {height: 2978, left: 0, top: 142, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 95e9bcd9-16d7-4909-9850-95b0224278cc
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
-	at com.test.roku.utils.CommonUtils.clickOnElement(CommonUtils.java:18)
-	at com.test.roku.pages.ContactUsPage.clickOnSubmitButton(ContactUsPage.java:66)
-	at com.test.roku.steps.ContactUsSteps.clickOnSubmitButton(ContactUsSteps.java:31)
-	at ✽.Click on submit button(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:86)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.test.roku.utils.DriverUtils.launchUrl(DriverUtils.java:178)
+	at com.test.roku.utils.DriverUtils.initDriver(DriverUtils.java:45)
+	at com.test.roku.utils.DriverUtils.getDriver(DriverUtils.java:50)
+	at com.test.roku.steps.Hooks.setUp(Hooks.java:30)
 
-runner.TestRunner.runScenario["Verify user should not be able to submit out of range message : "lessThanTwenty"", "User should be able to submit contact us request"](32) -- Time elapsed: 38.06 s <<< FAILURE!
-java.lang.AssertionError: Actual text is Subject must be between 5 and 100 characters. and expected text is Message must be between 20 and 2000 characters. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.test.roku.utils.AssertionUtils.assertEquals(AssertionUtils.java:17)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorMessageDisplayedWhenOutOfRangeTextEntered(ContactUsPageAssertions.java:87)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedErrorWithAcceptableRange(ContactUsSteps.java:78)
-	at ✽.User should be displayed error with acceptable range of "Message"(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:125)
-
-runner.TestRunner.runScenario["Verify user should not be able to submit out of range Phone Number : "777711112222333344445555"", "User should be able to submit contact us request"](35) -- Time elapsed: 39.18 s <<< FAILURE!
-java.lang.AssertionError: Actual text is Message must be between 20 and 2000 characters. and expected text is Phone must be between 11 and 21 characters. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.test.roku.utils.AssertionUtils.assertEquals(AssertionUtils.java:17)
-	at com.test.roku.steps.ContactUsPageAssertions.assertErrorMessageDisplayedWhenOutOfRangeTextEntered(ContactUsPageAssertions.java:87)
-	at com.test.roku.steps.ContactUsSteps.userShouldBeDisplayedErrorWithAcceptableRange(ContactUsSteps.java:78)
-	at ✽.User should be displayed error with acceptable range of "Phone"(file:///Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/test/java/features/contactUs.feature:102)
+runner.TestRunner.tearDownClass -- Time elapsed: 9.487 s <<< FAILURE!
+java.lang.RuntimeException: 
+java.io.IOException: HTTP request failed:
+> GET https://messages.cucumber.io/api/reports
+< HTTP/1.1 400 Bad Request
+< Strict-Transport-Security: max-age=31536000
+< Server: Netlify
+< Cache-Status: "Netlify Edge"; fwd=miss
+< Netlify-Vary: query
+< X-Amzn-Requestid: 029e577c-9f0f-460e-a71b-bfc33d86432f
+< Content-Length: 747
+< Age: 0
+< Date: Wed, 24 Sep 2025 00:06:18 GMT
+< X-Amzn-Trace-Id: Root=1-68d335fa-651631900d2de4730155d450;Parent=6d772104e05bd536;Sampled=0;Lineage=1:33587909:0
+< X-Nf-Request-Id: 01K5WGNPJKK8EXKMM7DDGSRX1S
+< Content-Type: text/plain; charset=UTF-8
+[31m┌──────────────────────────────────────────────────┐[39m
+[31m│[39m Private reports are no longer supported.         [31m│[39m
+[31m│[39m You can still publish anonymous (public) reports [31m│[39m
+[31m│[39m by removing the token from your configuration.   [31m│[39m
+[31m│[39m                                                  [31m│[39m
+[31m│[39m See [1m[4m[36mhttps://reports.cucumber.io/faqs[39m[24m[22m             [31m│[39m
+[31m└──────────────────────────────────────────────────┘[39m
+	at io.cucumber.core.plugin.MessageFormatter.writeMessage(MessageFormatter.java:34)
+	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+	at io.cucumber.core.runtime.CucumberExecutionContext.emitTestRunFinished(CucumberExecutionContext.java:139)
+	at io.cucumber.core.runtime.CucumberExecutionContext.finishTestRun(CucumberExecutionContext.java:118)
+	at io.cucumber.testng.TestNGCucumberRunner.finish(TestNGCucumberRunner.java:145)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.tearDownClass(AbstractTestNGCucumberTests.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.io.IOException: HTTP request failed:
+> GET https://messages.cucumber.io/api/reports
+< HTTP/1.1 400 Bad Request
+< Strict-Transport-Security: max-age=31536000
+< Server: Netlify
+< Cache-Status: "Netlify Edge"; fwd=miss
+< Netlify-Vary: query
+< X-Amzn-Requestid: 029e577c-9f0f-460e-a71b-bfc33d86432f
+< Content-Length: 747
+< Age: 0
+< Date: Wed, 24 Sep 2025 00:06:18 GMT
+< X-Amzn-Trace-Id: Root=1-68d335fa-651631900d2de4730155d450;Parent=6d772104e05bd536;Sampled=0;Lineage=1:33587909:0
+< X-Nf-Request-Id: 01K5WGNPJKK8EXKMM7DDGSRX1S
+< Content-Type: text/plain; charset=UTF-8
+[31m┌──────────────────────────────────────────────────┐[39m
+[31m│[39m Private reports are no longer supported.         [31m│[39m
+[31m│[39m You can still publish anonymous (public) reports [31m│[39m
+[31m│[39m by removing the token from your configuration.   [31m│[39m
+[31m│[39m                                                  [31m│[39m
+[31m│[39m See [1m[4m[36mhttps://reports.cucumber.io/faqs[39m[24m[22m             [31m│[39m
+[31m└──────────────────────────────────────────────────┘[39m
+	at io.cucumber.core.plugin.UrlOutputStream.createCurlLikeException(UrlOutputStream.java:150)
+	at io.cucumber.core.plugin.UrlOutputStream.getResponseBody(UrlOutputStream.java:135)
+	at io.cucumber.core.plugin.UrlOutputStream.sendRequest(UrlOutputStream.java:87)
+	at io.cucumber.core.plugin.UrlOutputStream.close(UrlOutputStream.java:65)
+	at java.base/sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:439)
+	at java.base/sun.nio.cs.StreamEncoder.lockedClose(StreamEncoder.java:237)
+	at java.base/sun.nio.cs.StreamEncoder.close(StreamEncoder.java:228)
+	at java.base/java.io.OutputStreamWriter.close(OutputStreamWriter.java:266)
+	at io.cucumber.core.plugin.MessageFormatter.writeMessage(MessageFormatter.java:31)
+	... 37 more
 

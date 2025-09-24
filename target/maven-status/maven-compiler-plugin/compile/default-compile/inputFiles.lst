@@ -2,6 +2,7 @@
 /Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/pages/ContactUsPage.java
 /Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/utils/DriverUtils.java
 /Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/utils/ConfigUtils.java
+/Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/steps/ApplicationLauncher.java
 /Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/steps/ContactUsSteps.java
 /Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/steps/Hooks.java
 /Users/sanju/Desktop/RokuAssignementWorkSpace/AutomationRoku/src/main/java/com/test/roku/utils/AssertionUtils.java

@@ -131,11 +131,14 @@ Default device is set as desktop, to update device type use any one option from 
 
    `mvn clean test -DdeviceType=<typeOfDevice>` to run from command line on a specific type of device
 
+### Parallel execution mechanism is in place:
+All test cases are running in parallel as we have running scenarios using TestNG's data provider annotation while overriding the method(i.e. Object[][] scenarios) in TestRunner class.
+
 
 **Scope of improvement for this project**
   - Verification of data being sent in  POST API
   - API response codes testing
-  - Parallel execution using Selenium grid
+  - Selenium grid
   - Publish the report to the organisation's internal resources for security purposes.
 
 ***Bugs in Contact Us form and submission***

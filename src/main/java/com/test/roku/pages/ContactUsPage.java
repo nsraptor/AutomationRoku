@@ -3,11 +3,19 @@ package com.test.roku.pages;
 import com.test.roku.steps.Hooks;
 import com.test.roku.utils.DriverUtils;
 import lombok.Getter;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static com.test.roku.utils.CommonUtils.clickOnElement;
 import static com.test.roku.utils.CommonUtils.sendKeysTo;
@@ -43,13 +51,12 @@ public class ContactUsPage {
     private WebElement thanksMessage;
     @FindBy(id = "description")
     private WebElement messageTextArea;
-    @FindBy(id = "submitContact")
+    @FindBy(xpath = "//button[text()='Submit']")
     private WebElement submitButton;
-    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    @FindBy(css = "div.alert.alert-danger")
     private WebElement errorMessageContainer;
 
-    public void submitContactUsDetails(String name, String email, String phone,
-                                            String subject, String message) {
+    public void submitContactUsDetails(String name, String email, String phone, String subject, String message) {
          sendKeysTo(nameTextField, name);
          sendKeysTo(emailTextField, email);
          sendKeysTo(phoneTextField, phone);
@@ -58,12 +65,20 @@ public class ContactUsPage {
     }
 
     public void scrollToContactUsForm(WebDriver webDriver) {
+        // object of Actions class to scroll up and down
+        Actions at = new Actions(webDriver);
+        at.sendKeys(Keys.PAGE_DOWN).build().perform();
         // Call the scrollIntoView method using JavascriptExecutor
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", nameTextField);
+        // ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", nameTextField);
     }
 
     public void clickOnSubmitButton() {
-         clickOnElement(submitButton);
-         waitForNotVisible(submitButton);
+        scrollToContactUsForm(driver);
+        scrollToContactUsForm(driver);
+        scrollToContactUsForm(driver);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(submitButton));
+        clickOnElement(submitButton);
+        System.out.println("clicked on submit button");
 }
 }

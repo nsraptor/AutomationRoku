@@ -6,12 +6,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static com.test.roku.utils.ConfigUtils.getPropertyByKey;
 
 public class ContactUsSteps {
     Hooks hooks = new Hooks();
-    WebDriver driver = hooks.getWebDriver();;
+    WebDriver driver = hooks.getWebDriver();
     ContactUsPageAssertions contactUsPageAssertions = new ContactUsPageAssertions(driver);
     ContactUsPage contactuspage = contactUsPageAssertions.getContactUsPage();
 
