@@ -1,4 +1,5 @@
 com/test/roku/utils/DriverUtils.class
+com/test/roku/steps/ApplicationLauncher.class
 com/test/roku/utils/ConfigUtils.class
 com/test/roku/steps/Hooks.class
 com/test/roku/steps/ContactUsPageAssertions.class

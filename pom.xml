@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.17.0</version>
+            <version>4.33.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
         <dependency>
@@ -79,6 +79,19 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.10.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>10.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.1.0-jre</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -122,6 +135,11 @@
             <groupId>com.github.temyers</groupId>
             <artifactId>cucumber-jvm-parallel-plugin</artifactId>
             <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.15.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -169,6 +187,12 @@
                 <version>3.1.2</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <environmentVariables>
+                        <CUCUMBER_PUBLISH_TOKEN>c320c024-a103-40fd-ad51-b4d4aa93708b</CUCUMBER_PUBLISH_TOKEN>
+                    </environmentVariables>
+                    <systemPropertyVariables>
+                        <cucumber.publish.quiet>false</cucumber.publish.quiet>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

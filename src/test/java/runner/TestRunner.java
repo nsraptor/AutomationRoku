@@ -5,8 +5,10 @@ package runner;
  import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        tags = "@Regression",
-        plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
+        tags = "@PVMobileNativeRegression",
+        plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "html:target/cucumberreport.html"
+        },
         glue = "com.test.roku.steps",
         features = "src/test/java/features/")
 public class TestRunner extends AbstractTestNGCucumberTests {
